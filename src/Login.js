@@ -1,6 +1,6 @@
-// src/Login.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'; // Import the CSS file
 
 const Login = ({ onLogin }) => {
   const [apiKey, setApiKey] = useState('');
@@ -14,7 +14,7 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className="login-container">
       <h2>Login Page</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -29,6 +29,10 @@ const Login = ({ onLogin }) => {
         </div>
         <button type="submit">Submit</button>
       </form>
+      
+      <p className="reference-text">
+        Need help? Check out the <a href="https://ai.google.dev/gemini-api" target="_blank" rel="noopener noreferrer">Gemini API documentation</a>.
+      </p>
     </div>
   );
 };
